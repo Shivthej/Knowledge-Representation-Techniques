@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<roviodb xmlns="http://www.example.com/roviodb"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.com/roviodb annu.xsd">
+
+	<cookbook cookbookId="C_21">
+		<title>Angry Birds Bad Piggies Egg Recipes</title>
+        <author>Bonnier Kirjat Oy</author>
+		<recipe recipeId="R_11">
+			<rname>Grilled Delight</rname>
+			<serves>4</serves>
+			<summary>A tasty grilled egg dish to be served with vegetable salad</summary>
+			<ingredient>
+				<ingredientId>41</ingredientId>
+				<name>Egg</name>
+				<substitute/>
+				<amount>10</amount>
+				<unit>Nos</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>53</ingredientId>
+				<name>Cooking Spray</name>
+				<substitute/>
+				<amount>1</amount>
+				<unit>Nos</unit>
+			</ingredient>
+			<instruction>
+				<instructionId>101</instructionId>
+				<command>Fire up an outdoor grill.</command>
+			</instruction>
+			<instruction>
+				<instructionId>102</instructionId>
+				<command>Use a muffin pan: coat all cups with cooking spray and break one egg per cup.</command>
+			</instruction>
+			<instruction>
+				<instructionId>103</instructionId>
+				<command>Place the pan on the grill and cook for 2-3 min over medium heat.</command>
+			</instruction>
+			<instruction>
+				<instructionId>104</instructionId>
+				<command>Serve with mixed vegetables/salad.</command>
+			</instruction>
+		</recipe>
+		<recipe recipeId="R_12">
+			<rname>Oven Made</rname>
+			<serves>2</serves>
+			<summary>Oven made egg - a delicacy with chives, peper and grated cheese</summary>
+			<ingredient>
+				<ingredientId>41</ingredientId>
+				<name>Egg</name>
+				<substitute/>
+				<amount>2</amount>
+				<unit>Nos</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>42</ingredientId>
+				<name>Butter</name>
+				<substitute>Olive oil</substitute>
+				<amount>1</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>43</ingredientId>
+				<name>Cream</name>
+				<substitute/>
+				<amount>2</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>44</ingredientId>
+				<name>Salt</name>
+				<substitute/>
+				<amount>1</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>45</ingredientId>
+				<name>Pepper</name>
+				<substitute>Chilli</substitute>
+				<amount>1</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>46</ingredientId>
+				<name>Minced Chives</name>
+				<substitute/>
+				<amount>1</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<ingredient>
+				<ingredientId>47</ingredientId>
+				<name>Grated Cheese</name>
+				<substitute/>
+				<amount>1</amount>
+				<unit>tbsp</unit>
+			</ingredient>
+			<instruction>
+				<instructionId>201</instructionId>
+				<command>Preheat the oven to 325 degree.</command>
+			</instruction>
+			<instruction>
+				<instructionId>202</instructionId>
+				<command>Grease inside of a ramekin with butter and pour the cream on the bottom.</command>
+			</instruction>
+			<instruction>
+				<instructionId>203</instructionId>
+				<command>Break egg on top of cream without breaking yolk.</command>
+			</instruction>
+			<instruction>
+				<instructionId>204</instructionId>
+				<command>Add salt pepper chives and grated cheese.</command>
+			</instruction>
+			<instruction>
+				<instructionId>205</instructionId>
+				<command>Bake for 12 to 15 min or until the whites have set.</command>
+			</instruction>
+			<instruction>
+				<instructionId>206</instructionId>
+				<command>Remove from oven and allow to set for 2 to 3 min before serving.</command>
+			</instruction>
+		</recipe>
+	</cookbook>
+</roviodb>

@@ -1,0 +1,19 @@
+<!ELEMENT roviodb (cookbook+)>
+<!ELEMENT cookbook (title+, author+, recipe+)>
+<!ATTLIST cookbook cookbookId ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT recipe (rname, serves, summary, ingredient+, instruction+)>
+<!ATTLIST recipe recipeId ID #REQUIRED>
+<!ELEMENT rname (#PCDATA)>
+<!ELEMENT serves (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT ingredient (ingredientId, name, substitute*, amount, unit)>
+<!ELEMENT ingredientId (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT substitute (#PCDATA)>
+<!ELEMENT amount (#PCDATA)>
+<!ELEMENT unit (#PCDATA)>
+<!ELEMENT instruction (instructionId, command)>
+<!ELEMENT instructionId (#PCDATA)>
+<!ELEMENT command (#PCDATA)>
