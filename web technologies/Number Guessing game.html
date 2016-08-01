@@ -1,0 +1,39 @@
+<html>
+<body onload="game()">
+
+<script>
+	var target;
+	var guess;
+	var flag = true;
+	var no_guess = 0;
+	
+	function game(){
+		target = Math.floor(Math.random()*101);
+		//target = 30;
+		do{
+			guess = parseInt(prompt("Guess a number between 1 to 100"));
+			no_guess+=1;
+			check_guess(guess);
+		}while(flag);
+		
+	}
+	
+	function check_guess(gnumber){
+		if(gnumber>=1 && gnumber<=100){
+			if(gnumber == target){
+				alert("You got it! The number was "+target+"\nYou got it right at "+ no_guess+"th guess");
+				flag = false;
+			}else if(gnumber<target){
+				alert("Your number is too small!");
+			}else{
+				alert("Your number is too large!");
+			}
+		}else if(isNaN(gnumber)){
+			alert("Your input is not a number");
+		}else{
+			alert("Your number is not in the range!");
+		}
+	}
+</script>
+</body>
+</html>
