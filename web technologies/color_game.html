@@ -1,0 +1,54 @@
+<html>
+ <body onload = "color_game()">
+  <script>
+	
+	var target_color;
+	var color_array = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+	var target_index;
+	var nguess = 0;
+	var flag = true;
+	
+	function color_game(){
+	
+		target_index = Math.floor(Math.random()*11);
+		target_color = color_array[target_index];
+		alert("The color I am thinking is "+target_color);
+		var display = "I am thinking of one of these colors:\n\n"
+
+		display+=color_array.join();
+		
+		display+="\n\n What color am I thinking of?";
+		do{
+			color = prompt(display);
+			nguess+=1;
+			flag = check_color(color);
+		}while(flag);
+		
+		
+	}
+	
+	function check_color(in_color){
+		
+		if(in_color == target_color){
+			document.getElementsByTagName("body")[0].style.background = in_color;
+			alert("Congratualtions! You have guessed the color!\n\n It took you "+nguess+" guesses to finish the game!\n\nYou can see the color in the background")
+			return false;
+		}else{
+			for(i=0;i<color_array.length;i++){
+				if(in_color==color_array[i]){
+					if(in_color>target_color){
+						alert("Sorry, your guess is not correct!\n\nHint: your color is alphabetically higher than mine. \n\nPlease try again.");
+						return true;
+					}else if(in_color<target_color){
+						alert("Sorry, your guess is not correct!\n\nHint: your color is alphabetically lower than mine. \n\nPlease try again.");
+						return true;
+					}
+				}
+			}
+			alert("Sorry, I don't recognize your color.\n\nPlease try again.");
+			return true;
+		}
+	}
+  </script>
+ </body>
+</html>
