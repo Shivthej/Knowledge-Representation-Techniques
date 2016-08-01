@@ -1,0 +1,58 @@
+extends layout
+
+block content
+   
+        div(class="head")
+            hr 
+            div(class="jumbotron")
+                div(class="bs-example" data-example-id="inverted-navbar")
+                     nav(class="navbar navbar-inverse")
+                        div(class="navbar-header")
+                            btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                            a(class="navbar-brand" href="/")="Home"
+                            btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                            a(class="navbar-brand" href="/visual")="Sentiment Statistics"
+                            btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                            a(class="navbar-brand" href="/about")="About"
+      
+            br
+            br
+        div(class)
+        form#formSearchUser(name="search",method="post",action="/userlist")
+                     div(class="row")
+                        div(class="col-lg-6")
+                            div(class="input-group")
+                                input#inputUserName(type="text", placeholder="Enter the text", name="username", class="form-control")
+                                span(class="input-group-btn")
+                                    button#btnGo(class="btn btn-default") Search
+    
+        h2="Total no of tweets = "+userlist.length 
+
+
+        p Showing search result for your query "#{global2}"
+        br
+        
+        div(class="panel panel-default")
+            div(class="panel-heading")
+                div(class="panel-body table-responsive")
+                    table(class="table")
+                        tr
+                            th Tweet Owner
+                            th Candidate Name
+                            th Tweet
+                            th Created Time
+                            th Sentiment 
+
+
+                        each user, i in userlist
+                            tr
+                             td
+                                a(href="/comments/#{user.id}" id=user.id)=user.name
+                             td
+                                #{user.candidate}=user.candidate
+                             td
+                                #{user.text}=user.text
+                             td
+                                #{user.time}=user.tweet_created
+                             td
+                                #{user.sentiment}=user.sentiment

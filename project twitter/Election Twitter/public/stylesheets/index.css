@@ -1,0 +1,63 @@
+@media screen and (min-width: 580px) {
+	body {background-color:#E6E6FA ;
+		color: white;}
+}
+
+body {font-family: Sans-Serif; 
+color: blue;
+background-color:#E6E6FA;
+background: url(../images/senti.jpg);}
+
+h1{font-weight: bold;
+color: solid black;
+font-family: Sans-Serif;
+text-align: center;
+}
+
+h2{font-weight: bold;
+color: solid black;
+text-align: center;
+font-family: Sans-Serif;
+}
+
+h3{font-weight: bold;
+   color: red;
+   text-align: center;
+   font-family: Sans-Serif;
+}
+
+
+table {width: 100%;
+}
+
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;}
+
+
+
+th {text-align: center;
+ background-color: #AFEEEE;
+color: black;}
+
+td{
+	padding: 1px;
+	text-align: left;
+	border-bottom: 1px solid black;
+	font-family: Sans-Serif;
+}
+
+tr:hover{background-color:#8C92AC;
+}
+
+a:hover{color: red;
+}
+
+li{list-style-type: square;
+
+font-family:Sans-Serif ;
+}
+
+.mytext {width: 350px;
+height:40px;
+}

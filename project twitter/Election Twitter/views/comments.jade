@@ -1,0 +1,66 @@
+extends layout
+
+block content
+    div(class="container")
+       
+        
+        
+        div(class="jumbotron")
+            div(class="bs-example" data-example-id="inverted-navbar")
+                nav(class="navbar navbar-inverse")
+                    div(class="navbar-header")
+                        btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                        a(class="navbar-brand" href="/")="Home"
+                        btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                        a(class="navbar-brand" href="/visual")="Sentiment Statistics"
+                        btn(class="navbar-toggle collapsed" aria-expanded="false" data-target="#bs-example-navbar-collapse-9" data-toggle="collapse" type="button")
+                        a(class="navbar-brand" href="/about")="About"
+        div(class="container")
+       
+        h1= title
+        br
+        div(class="row")
+            div(class="col-xs-6 col-md-4")
+                strong ID:
+                label #{docs[0].id}
+            div(class="col-xs-6 col-md-4")
+                Candidate Name:
+                label #{docs[0].candidate}
+        div(class="row")
+            div(class="col-xs-6 col-md-10")
+                Tweet Content:
+                label #{docs[0].text}
+        div(class="row")
+            div(class="col-xs-6 col-md-4")
+                Is this a relevant tweet:
+                label #{docs[0].relevant_yn}
+            div(class="col-xs-6 col-md-4")
+                Tweet Owner:
+                label #{docs[0].name}
+            div(class="col-xs-6 col-md-4")
+                Created at:
+                label #{docs[0].tweet_created}
+        br
+        br
+        
+        div(class="jumbotron")
+            form#formAddUser(name="Comments",method="post",action="/comments" onsubmit="Redirect();")
+                    div(class="row")
+                        div(class="col-lg-6")
+                            div(class="input-group")
+                                input#inputComments(type="text", class="form-control", placeholder="Type your comment here...",name="Comment" required)
+                                span(class="input-group-btn")
+                                    button#btnGo(class="btn btn-primary") Add Comment
+
+            
+        br
+     
+        form#formSearchUser(name="search",method="post",action="/userlist")
+                div(class="row")
+                    div(class="col-lg-6")
+                        div(class="input-group")
+                            input#inputUserName(type="hidden", class="form-control", value="#{global2}", name="username")
+                            span(class="input-group-btn")
+                                button#btnGo(class="btn btn-primary") Search Again
+                
+        
